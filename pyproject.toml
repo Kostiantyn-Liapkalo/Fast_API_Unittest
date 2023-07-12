@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "fast-api-unittest"
+version = "0.1.0"
+description = ""
+authors = ["Kostiantyn <lynx87@ukr.net>"]
+readme = "README.md"
+packages = [{include = "fast_api_unittest"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = {extras = ["all"], version = "^0.95.2"}
+uvicorn = {extras = ["standart"], version = "^0.22.0"}
+sqlalchemy = "^2.0.15"
+psycopg2 = "^2.9.6"
+alembic = "^1.11.1"
+python-jose = "^3.3.0"
+passlib = "^1.7.4"
+python-multipart = "^0.0.6"
+libgravatar = "^1.0.4"
+fastapi-mail = "^1.2.8"
+fastapi-limiter = "^0.1.5"
+python-dotenv = "^1.0.0"
+redis = "^4.5.5"
+cloudinary = "^1.33.0"
+bcrypt = "^4.0.1"
+pytest = "^7.3.1"
+
+
+[tool.poetry.group.dev.dependencies]
+sphinx = "^7.0.1"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.3.1"
+pytest-cov = "^4.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
